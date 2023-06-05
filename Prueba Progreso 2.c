@@ -79,6 +79,25 @@ for (s = 0; s < 2; s++)
     }
 
     printf("El semestre que tuvo el promedio mas alto fue %d",smn);
+      
+ // calculo del promedio del alumno con mayor nota 
+ int mrn = 0; // la mayor nota que se registro
+int amp = 0; // el alumno con mas promedio
+
+    for (al = 0; al < 23; al++)
+    {
+        int tdc = Datos[2 - 1][3 - 1][al]; // total de calificaciones
+
+        if (tdc > amp)
+        {
+            amp = tdc;
+            mrn = al;
+        }
+    }
+
+    printf("\nLa carrera que recibio la mayor cantidad de alumnos inscritos este ultmo año fue la de %s\n", alumnos[mrn]);
+    
+
 
         return 0;
 }
