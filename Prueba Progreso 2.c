@@ -55,16 +55,31 @@ for (s = 0; s < 2; s++)
         }
     }
 
-int 
+// mayor promedio del semestre
+  int smn = 0; //semestre de mayores notas
+  int mn = 0; // mayores notas
 
+    for (s = 0; s < 2; s++)
+    {
+        int tn = 0; // total de notas
+      
+        for (p = 0; p < 3; p++)
+        {
+            for (al = 0; al < 23; al++)
+            {
+                tn += Datos[s][p][al];
+            }
+        }
 
+        if (tn > mn)
+        {
+            mn = tn;
+            smn =  s + 1;
+        }
+    }
 
-
-
-
-
-
-
+    printf("El semestre que tuvo el promedio mas alto fue %d",smn);
 
         return 0;
 }
+  
